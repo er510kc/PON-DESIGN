@@ -1,0 +1,75 @@
+@use "../../global" as g;
+
+.c-form {
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  &__require {
+    margin-left: 10px;
+    color:g.$color-primary;
+    @include g.font-size(12);
+  }
+  &__radio {
+    @include g.mq(sp) {
+      display: block;
+    }
+    &:not(:last-child) {
+      margin-right: 35px;
+
+      @include g.mq(sp) {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__note {
+    font-weight: normal;
+    margin-left: 5px;
+    @include g.font-size(12);
+  }
+  &__input,
+  &__select {
+    width: 300px;
+    padding: 8px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+
+    @include g.mq(sp) {
+      width: 100%;
+    }
+  }
+  input[tyle="radio"] {
+    margin-right: 5px;
+  }
+  input[type="tel"]{
+    width: 200px;
+
+    @include g.mq(sp) {
+      width: 100%;;
+    }
+  }
+  &__textarea {
+    min-width: 600px;
+    min-height: 200px;
+    padding: 8px;
+    resize: both;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+
+    @include g.mq(sp) {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+  }
+}

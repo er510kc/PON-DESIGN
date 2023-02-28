@@ -1,0 +1,48 @@
+@use "../global" as g;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  Meiryo, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  @include g.font-size(15);
+  
+  @include g.mq(sp) {
+    @include g.font-size (14);
+  }
+  color: g.$color-text;
+}
+
+a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: g.$color-primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

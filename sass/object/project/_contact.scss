@@ -1,0 +1,20 @@
+@use "../../global" as g;
+
+.p-contact {
+  background-color: g.$color-gray;
+  text-align: center;
+  padding: 80px 0;
+  margin-top: 40px;
+
+  @include g.mq(sp){
+    padding: 60px 0;
+  }
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+  
+  &__body {
+    margin-bottom: 20px;
+  }
+}

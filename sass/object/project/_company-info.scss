@@ -1,0 +1,11 @@
+@use "../../global" as g;
+
+.p-company-info {
+  &__heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__table {
+    margin-bottom: 60px;
+  }
+}

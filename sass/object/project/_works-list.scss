@@ -1,0 +1,7 @@
+@use "../../global/" as g;
+
+.p-works-list {
+  .c-card__img {
+    border: 1px solid #ececec;
+  }
+}

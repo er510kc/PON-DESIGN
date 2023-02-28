@@ -1,0 +1,20 @@
+// ブレイクポイント
+$break-point: (
+  sp: 768px,
+  tab: 960px,
+  pc: 1140px
+);
+
+// メディアクエリを@mixinで定義
+@mixin mq( $key ) {
+  @media ( max-width: map-get( $break-point, $key )) {
+    @content;
+  }
+}
+
+@mixin font-size($size, $base:16) {
+  font-size: $size + px;
+  font-size: calc($size / $base) + rem;
+}
+
+

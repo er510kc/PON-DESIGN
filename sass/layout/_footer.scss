@@ -1,0 +1,58 @@
+@use "../global" as g;
+
+.l-footer {
+  background-color:#120E19;
+  padding: 60px 30px;
+
+  &-nav {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+
+      @include g.mq(sp) {
+        justify-content: flex-start;
+        margin-bottom: -10px;
+      }
+      
+    }
+    &__item {
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e9e1d1;
+
+      @include g.font-size(12);
+      @include g.mq(sp) {
+        margin-bottom: 10px;
+      }
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    &__link {
+      color:#fff;
+      padding: 5px;
+
+      &:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.c-copyright {
+  text-align: center;
+  margin-top: 30px;
+  @include g.font-size(10);
+
+  &__link {
+    color:#A798B7;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+}

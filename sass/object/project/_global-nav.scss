@@ -1,0 +1,149 @@
+@use "../../global" as g;
+
+.p-global-nav {
+  @include g.mq(sp) {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    visibility: hidden;
+    align-items: center;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    background: linear-gradient(135deg, #7633a4,#250d65);
+    
+    &.fade {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding-left: 30px;
+    list-style: none;
+
+    @include g.mq(sp) {
+      flex-direction: column;
+      align-items: center;
+      width:100%;
+      padding: 0;
+    }
+  }
+  &__item {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include g.font-size(14);
+    @include g.mq(tab) {
+      @include g.font-size(12);
+    }
+    @include g.mq(sp) {
+      margin: 0 0 20px;
+      @include g.font-size(16);
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 25px;
+
+    @include g.mq(sp){
+      margin-right: 0;
+    }
+  }
+  &__link {
+    position:relative;
+    display: inline-block;
+    color:#fff;
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 1px;
+      content: "";
+      transition: width 0.3s;
+      background-color: #fff;
+
+      @include g.mq(sp){
+        display: none;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      &::after {
+        width:100%;
+      }
+    }
+  }
+}
+
+
+.c-btn-menu {
+  display: none;
+
+  @include g.mq(sp) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // text-align: center;
+    opacity: 0.9;
+    width: 40px;
+    height: 40px;
+    padding:5px;
+    cursor: pointer;
+    
+    z-index:100;
+  }
+  &__line {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.4s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius:  
+      4px;
+      transition: inherit;
+      background-color:#fff;
+    }
+    &::before {
+      top: -8px;
+    }
+    &::after {
+      top: 8px;
+    }
+  }
+}
+
+.c-btn-menu.open {
+  .c-btn-menu__line {
+    background-color: transparent;
+    &::before,
+    &::after {
+      top: 0;
+      background-color: #fff;
+    }
+
+    &::before {
+      transform:rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+

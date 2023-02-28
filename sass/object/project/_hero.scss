@@ -1,0 +1,114 @@
+@use "../../global/" as g;
+.p-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color:#FFFFFF;
+  background: center / cover no-repeat url(../img/hero.jpg);
+
+  &__inner {
+    text-align: center;
+    padding: 0 30px;
+
+    @include g.mq(sp) {
+      text-align: left;
+    }
+  }
+  
+  &__title {
+    @include g.font-size(72);
+    font-weight: bold;
+    line-height: 1;
+
+    @include g.mq(sp) {
+      line-height: 1.1;
+      @include g.font-size(40);
+    }
+  }
+  &__subtitle {
+    margin-top: 20px;
+    @include g.font-size(24);
+
+    @include g.mq(sp) {
+      @include g.font-size(16);
+    }
+  }
+  &__link {
+    margin-top: 50px;
+
+    @include g.mq(sp) {
+      margin-top: 30px;
+    }
+  }
+  &__scroll {
+    display:inline-block;
+    position:absolute;
+    right:20px;
+    bottom:0;
+    padding: 10px 10px 90px;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+
+    @include g.font-size(12);
+    @include g.mq(sp) {
+      right: 5px;
+      padding: 10px 10px 60px;
+    }
+    &::after {
+      content:"";
+      position:absolute;
+      bottom: 0;
+      left:50%;
+      width: 1px;
+      height: 80px;
+      background: #fff;
+      animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+
+      @include g.mq(sp) {
+        height: 50px;
+      }
+    }
+    @keyframes sdl {
+      0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+      }
+      50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+      }
+      50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+      }
+      100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+      }
+    }
+  }
+}
+
+.p-sub-hero {
+  height: 240px;
+  background-image: url(../img/hero.jpg);
+  background-repeat: 
+  no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include g.mq(sp) {
+    height: 180px;
+  }
+
+  &__inner {
+    padding: 50px 40px 10px 40px;
+    text-align: center;
+  }
+}

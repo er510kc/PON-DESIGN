@@ -1,0 +1,18 @@
+@use "../../global" as g;
+
+.p-access {
+  &__map {
+    margin-bottom: 5px;
+    iframe {
+      height: 400px;
+      vertical-align: bottom;
+
+      @include g.mq(sp) {
+        height: 240px;
+      }
+    }
+  }
+  &__map-link {
+    @include g.font-size(14);
+  }
+}

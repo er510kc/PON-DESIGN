@@ -1,0 +1,47 @@
+@use "../../global/" as g;
+
+.p-recruit-message {
+  text-align: center;
+
+  &__heading {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    color:g.$color-primary;
+
+    @include g.mq(sp) {
+      margin: 20px 0;
+    }
+  }
+  &__title {
+    line-height: 1;
+    margin-bottom: 10px;
+    @include g.font-size(72);
+    font-weight: bold;
+
+    @include g.mq(sp) {
+      line-height: 1.2;
+      @include g.font-size(48);
+    }
+  }
+  &__subtitle {
+      @include g.font-size(32);
+
+      @include g.mq(sp) {
+        @include g.font-size(18);
+      }
+  }
+  &__body {
+    margin-bottom: 40px;
+    @include g.font-size(16);
+
+    @include g.mq(sp){
+      @include g.font-size(15);
+    }
+  }
+  &__img-wrapper {
+    img {
+      clip-path: polygon(0 15%,100% 0,100% 85%,0% 100%);
+    }
+  }
+}

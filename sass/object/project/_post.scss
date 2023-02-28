@@ -1,0 +1,77 @@
+@use "../../global" as g;
+
+.article-wrapper {
+  &__inner {
+    max-width: 750px;
+  }
+}
+
+.p-post {
+  background-color: #fff;
+  &__head {
+    margin-bottom: 30px;
+    @include g.mq(sp) {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    line-height: 1.5;
+    @include g.font-size(32);
+
+    @include g.mq(sp) {
+      @include g.font-size(22);
+    }
+  }
+  &__info {
+    display: flex;
+    margin-top: 10px;
+  }
+  &__date {
+    @include g.font-size(13);
+    margin-right: 10px;
+  }
+  &__body {
+    margin-bottom: 40px;
+    > p {
+      margin-bottom: 30px;
+      @include g.font-size(16);
+      @include g.mq(sp){
+        @include g.font-size(15);
+      }
+    }
+    > h3 {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      @include g.font-size(24);
+      font-weight: bold;
+      line-height: 1.6;
+      position:relative;
+      color: #393636;
+      padding-left: 20px;
+      @include g.mq(sp){
+        @include g.font-size(18);
+        margin-top: 40px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 6px;
+        height: 100%;
+        border-radius: 3px;
+        background-color: g.$color-primary;
+      }
+    }
+    > h4 {
+      @include g.font-size(18);
+      @include g.mq(sp){
+        @include g.font-size(17);
+      }
+    }
+  }
+  &__sns {
+    margin-bottom: 40px;
+  }
+}

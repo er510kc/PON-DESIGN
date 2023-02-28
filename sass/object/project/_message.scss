@@ -1,0 +1,22 @@
+@use "../../global/" as g;
+
+.p-message {
+  margin-bottom: 30px;
+  text-align: center;
+
+  &__heading {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 40px;
+    @include g.font-size(40);
+    
+    @include g.mq(sp) {
+      line-height: 1.5;
+      @include g.font-size(32);
+    }
+  }
+  &__underline {
+    background: linear-gradient(transparent 70%, #F5F534 0%);
+  }
+ }

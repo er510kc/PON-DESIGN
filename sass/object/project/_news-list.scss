@@ -1,0 +1,44 @@
+@use "../../global/" as g;
+
+.p-news-list {
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    @include 
+    g.font-size(14);
+    @include g.mq(sp) {
+      display: block;
+      @include g.font-size(14);
+    }
+    &:not(:last-child){
+      margin-bottom: 15px;
+      @include g.mq(sp){
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__heading {
+    display: flex;
+
+    
+  }
+  &__date {
+    margin-right: 20px;
+    width:80px;
+  }
+  &__label
+  {
+    margin-right: 20px;
+  }
+}
+
+.p-news-list-wrapper {
+  &__inner {
+    max-width: 780px;
+  }
+  &__body {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../global" as g;
+
+.l-section {
+  padding: 70px 0;
+
+  @include g.mq(sp) {
+    padding: 40px 0;
+  }
+}

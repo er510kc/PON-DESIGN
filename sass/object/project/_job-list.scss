@@ -1,0 +1,35 @@
+@use "../../global/" as g;
+
+.p-job-list {
+  padding-top: 0;
+  &__heading {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__detail {
+    padding: 60px 95px;
+    border: 1px solid #b067cf;
+    border-radius: 6px;
+    background-color: #fff;
+
+    @include g.mq(sp) {
+      padding: 30px 20px;
+    }
+  }
+  &__name {
+    margin-bottom: 30px;
+    text-align: center;
+    @include g.font-size(24);
+  }
+  &__table {
+    margin-bottom: 50px;
+  }
+  &__link {
+    text-align: center;
+    &-note {
+      display: block;
+      margin-top: 5px;
+      @include g.font-size(12);
+    }
+  }
+}

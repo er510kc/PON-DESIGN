@@ -1,0 +1,27 @@
+@use "../../global/" as g;
+
+.p-sns-share {
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 5px;
+    margin-right: 2px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  iframe {
+    vertical-align: middle;
+  }
+}
+
+
+.line-it-button {
+  width: 30px;
+  height: 30px;
+}
+
+.p-sns-share__item>.line-it-button {
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,8 @@
+@use "../../global" as g;
+
+.p-company-video {
+  &__heading {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

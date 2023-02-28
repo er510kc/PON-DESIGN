@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+.l-contents {
+  &--page-recruit {
+    background-image: url(./../img/bg-geometry.png);
+    /* Background pattern from Toptal Subtle Patterns */
+    background-repeat: repeat;
+
+    @include g.mq(sp) {
+      background-size: 50%;
+    }
+  }
+}

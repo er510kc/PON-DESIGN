@@ -1,0 +1,52 @@
+@use "../../global/" as g;
+
+.p-post-pager {
+  margin-bottom: 20px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #b8aed5;
+    border-bottom: 1px solid #b8aed5;
+  }
+
+  &__item {
+    flex: 0 1 50%;
+    margin: 15px 0;
+
+    &:not(:last-child) {
+      border-right: 1px solid #b8aed5;
+    }
+    &--prev {
+      .post-pager__link {
+        padding: 10px 20px 10px 40px;
+      }
+    }
+    &--next {
+      .post-pager__link {
+        padding: 10px 40px 10px 20px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    height: 100%;
+    text-decoration: none;
+    @include g.font-size(14);
+    color: g.$color-primary;
+    @include g.mq(sp) {
+      @include g.font-size(12);
+    }
+    &:hover {
+      text-decoration: none;
+      background-color:#f9f7ff;
+    }
+  }
+  &__home {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,8 @@
+@use "../../global/" as g;
+.u-sp-only {
+  display: none;
+
+  @include g.mq(sp) {
+    display: block;
+  }
+}
