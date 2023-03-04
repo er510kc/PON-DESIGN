@@ -1390,7 +1390,6 @@ img {
   max-width: 1300px;
   padding: 100px 0;
   background-repeat: no-repeat;
-  margin: 0 15px;
 }
 @media (max-width: 768px) {
   .p-company__inner {
